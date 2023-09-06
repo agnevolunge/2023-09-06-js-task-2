@@ -93,3 +93,14 @@ console.log (monthsToHours(3))
 // 7. Funkciją, kuri konvertuoja mėnesius į minutes:
 // 7.1. Funkcija priima vieną argumentą: mėnesių skaičių.
 // 7.2. Funkcija grąžina atsakymą tokiu formatu: 2 mėnesiai turi 87600 minutes.
+
+function monthsToMinutes (numberOfMonths) {
+
+    let numberOfMinutes = (((numberOfMonths * 30) * 24)) * 60
+
+    let output = `${numberOfMonths} mėnesiai turi ${numberOfMinutes} minutes`
+
+    return output
+}
+
+console.log (monthsToMinutes(2))

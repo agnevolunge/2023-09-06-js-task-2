@@ -50,6 +50,7 @@ console.log(daysToWeeks(35))
 
 
 function daysToYears (numberOfDays){
+    
     let numberOfYears = numberOfDays / 365
 
     let output = `${numberOfDays} dienos yra ${numberOfYears} metai.`
@@ -64,6 +65,7 @@ console.log (daysToYears(365))
 // 5.2. Funkcija grąžina atsakymą tokiu formatu: 5 metai turi 43800 valandas.
 
 function yearsToHours (numberOfYears) {
+    
     let numberOfHours = (numberOfYears *24) * 365
 
     let output = `${numberOfYears} metai turi ${numberOfHours} valandas.`
@@ -76,7 +78,18 @@ console.log (yearsToHours(5))
 // 6. Funkciją, kuri konvertuoja mėnesius į valandas:
 // 6.1. Funkcija priima vieną argumentą: mėnesių skaičių.
 // 6.2. Funkcija grąžina atsakymą tokiu formatu: 3 mėnesiai turi 2190 valandas.
+
+function monthsToHours (numberOfMonths) {
+    
+    let numberOfHours = ((numberOfMonths * 30) * 24)
+
+    let output = `${numberOfMonths} mėnesiai turi ${numberOfHours} valandas.`
+
+    return output
+}
  
+console.log (monthsToHours(3))
+
 // 7. Funkciją, kuri konvertuoja mėnesius į minutes:
 // 7.1. Funkcija priima vieną argumentą: mėnesių skaičių.
 // 7.2. Funkcija grąžina atsakymą tokiu formatu: 2 mėnesiai turi 87600 minutes.

@@ -19,10 +19,26 @@ function humanToDogYears (humanYears) {
 // 2.1. Funkcija priima vieną parametrą: norimų per metus perskaityti knygų skaičių.
 // 2.1. Funkcija grąžina atsakymą tokiu formatu: norint perskaityti 10 knygų per metus, vienai knygai perskaityti turėsi 36 dienas.
 
-function readWantedBooks (numberOfBooks) {
-    let daysForBook = Math.round(365 / numberOfBooks)
+// function readWantedBooks (numberOfBooks) {
+//     let daysForBook = Math.round(365 / numberOfBooks)
 
-    let output = `Norint perskaityti ${numberOfBooks} knygų per metus, vienai knygai perskaityti turėsi ${daysForBook} dienas .`
+//     let output = `Norint perskaityti ${numberOfBooks} knygų per metus, vienai knygai perskaityti turėsi ${daysForBook} dienas .`
+
+//     return output
+// }
+
+// console.log(readWantedBooks(10))
+
+function readWantedBooks (numberOfBooks) {
+    // let week = math.floor(days/7)
+    // console.log(numberOfBooks)
+    let week = Math.floor((365 / numberOfBooks) / 7) //math.floor apvalina i mazaja puse
+    // console.log(Math.floor(week))
+    let remainingDays = week % 7
+    // console.log(remainingDays)
+
+
+    let output = `Norint perskaityti ${numberOfBooks} knygų per metus, vienai knygai perskaityti turėsi ${week} savaites ir ${remainingDays} dienas .`
 
     return output
 }
@@ -36,8 +52,9 @@ console.log(readWantedBooks(10))
 function daysToWeeks (numberOfDays) {
 
     let numberOfWeeks = numberOfDays / 7
+    let fixedWeeks = numberOfWeeks.toFixed(1) // to.Fixed() skliausteliuose rasom kiek skaiciu po kablelio rodys ats
 
-    let output = `${numberOfDays} dienos yra ${numberOfWeeks} savaitės.`
+    let output = `${numberOfDays} dienos yra ${fixedWeeks} savaitės.`
 
     return output
 }
@@ -104,3 +121,10 @@ function monthsToMinutes (numberOfMonths) {
 }
 
 console.log (monthsToMinutes(2))
+
+
+// Papildomai dabar padarykime kad uzduotyse, kur atsakymas nera sveikas skaicius, jeigu turime liekana, tai ja irgi atvaizduotu sakinyje. Pvz., jeigu irasome 15 dienu, o mums turetu grazinti atsakyma: 15 dienos yra 2 savaites ir 1 diena.
+
+ 
+
+// Ir tuo paciu principu pameginkime atlikti visas uzduotis, kuriuose yra liekana 
